@@ -1,19 +1,9 @@
-import sys
-import os
+import typer
 
-def       main(    ):
-    v = sys.version_info[0]
-    if v == 2:
-        exec('name = raw_input("Enter your name: ")')
-        exec('print "Hello appsec world from @" + name')
 
-    elif v == 3:
-        name = input("Enter your name: ")
-        print("Hello appsec world from @" + name)
-    else:
-        print("Unknown python version")
-        
-        
+def main(name: str = typer.Option(..., prompt="Enter your name")):
+    print(f"Hello appsec world from @{name}")
+
 
 if __name__ == "__main__":
-    main(          )
+    typer.run(main)
