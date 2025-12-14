@@ -1,4 +1,4 @@
-# Hello appsec world application
+# Hello appsec world file
 # Author: Butters7
 
 import typer
